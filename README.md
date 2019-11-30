@@ -1,2 +1,2 @@
-# Random Quote Generator
+# RandomQuoteGenerator
  Teck Degree Project
