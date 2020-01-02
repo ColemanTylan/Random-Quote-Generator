@@ -51,11 +51,8 @@ var quotes = [
 
 // This will get random quote from function
 function getRandomQuote(){
-var randomNumber =  Math.floor( Math.random() * quotes.length );
-  
+var randomNumber =  Math.floor( Math.random() * quotes.length ); 
     return  quotes[randomNumber] 
-  
-
 }
 
 
@@ -70,7 +67,6 @@ document.getElementsByClassName("quote")[0].innerHTML = callGetRandomQuote.quote
 document.getElementsByClassName("source")[0].innerHTML = callGetRandomQuote.source;
 document.getElementsByClassName("citation")[0].innerHTML = callGetRandomQuote.citation;
 document.getElementsByClassName("year")[0].innerHTML = callGetRandomQuote.year;
-
 //$(".source").html("test");
 
 }
