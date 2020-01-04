@@ -10,10 +10,6 @@ project 1 - A Random Quote Generator
 /*** 
  * `quotes` array 
 ***/
-
-
-
-
 var quotes = [
   {
    quote: "Keep your mind fixed on what you want in life, not on what you don't want.",
@@ -46,29 +42,27 @@ var quotes = [
     year: "2010"
   }];
 
-
-
-
-// This will get random quote from function
+// This gets random quote from function
 function getRandomQuote(){
 var randomNumber =  Math.floor( Math.random() * quotes.length ); 
     return  quotes[randomNumber] 
 }
 
-
-
-
-//This will connect the quote to the html sting 
+//This will connect the quote to the html sting/ project instructions page/ big lesson learned here lol 
 function printQuote(){
   var callGetRandomQuote = getRandomQuote();
+  var getQuote = "";
+  getQuote += '<p class="quote">' + callGetRandomQuote.quote + "</p>";
+  getQuote += '<p class="source">' + callGetRandomQuote.source;
+  getQuote += '<span class="citation">' + callGetRandomQuote.citation + "</span>";
+  getQuote += '<span class="year">' + callGetRandomQuote.year + "</span>";
+  document.getElementById('quote-box').innerHTML = getQuote;
 
-// Learned  "document.getElementsByClassName " while on stack over flow
-document.getElementsByClassName("quote")[0].innerHTML = callGetRandomQuote.quote; 
-document.getElementsByClassName("source")[0].innerHTML = callGetRandomQuote.source;
-document.getElementsByClassName("citation")[0].innerHTML = callGetRandomQuote.citation;
-document.getElementsByClassName("year")[0].innerHTML = callGetRandomQuote.year;
-//$(".source").html("test");
-
+// Learned  "document.getElementsByClassName " while on stack over flow/ learned this was not the best way to call span tags while inside <p> tags
+//document.getElementsByClassName("quote")[0].innerHTML = callGetRandomQuote.quote; 
+//document.getElementsByClassName("source")[0].innerHTML = callGetRandomQuote.source;
+//document.getElementsByClassName("citation")[0].innerHTML = callGetRandomQuote.citation;
+//document.getElementsByClassName("year")[0].innerHTML = callGetRandomQuote.year; 
 }
 
 /***
