@@ -7,9 +7,7 @@ project 1 - A Random Quote Generator
   // Check the "Project Resources" section of the project instructions
   // Reach out in your Slack community - https://treehouse-fsjs-102.slack.com/app_redirect?channel=chit-chat
 
-/*** 
- * `quotes` array 
-***/
+//This is the quotes array
 var quotes = [
   {
    quote: "Keep your mind fixed on what you want in life, not on what you don't want.",
